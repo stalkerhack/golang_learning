@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+////////////////////////////////////////////////////////////////////////////////
 // Объявление и описание функции avarage
 func average(avarage_array []float64) (result float64) {
 	var i int
@@ -15,6 +16,8 @@ func average(avarage_array []float64) (result float64) {
 	return
 }
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Объявление и описание функции factorial
 func factorial(x uint) uint {
 	if x == 0 {
@@ -24,10 +27,36 @@ func factorial(x uint) uint {
 	return x * factorial(x-1)
 }
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Объявление и описание функции fibonacci.....Доделать!!!!!!
+func fibonacci(input int) int {
+	var i int
+	var result int
+
+	if input == 1 {
+		return 1
+	}
+	if input == 2 {
+		return 1
+	}
+	for i = 1; i < input; i++ {
+
+		result = fibonacci(i-1) + fibonacci(i-2)
+		fmt.Println(result)
+	}
+	return result
+}
+
+////////////////////////////////////////////////////////////////////////////////
 func main() {
 	fmt.Println("Введите число для расчета факториала: ")
-	var input_value uint
-	fmt.Scanln(&input_value)
+	var input_value_factorial uint
+	fmt.Scanln(&input_value_factorial)
+
+	fmt.Println("\nВведите число для числе Фибоначчи: ")
+	var input_value_fibonacci int
+	fmt.Scanln(&input_value_fibonacci)
 
 	// Объявление массива, который будет передан функции avarage
 	first_array := []float64{98, 93, 77, 82, 83}
@@ -36,5 +65,8 @@ func main() {
 	fmt.Println("\n\nСреднее арифметическое = ", average(first_array))
 
 	// Вызов функции factorial, считающей факториал
-	fmt.Println("Факториал числа = ", factorial(input_value))
+	fmt.Println("Факториал числа = ", factorial(input_value_factorial))
+
+	//Вызов функции fibonacci, считающей последовательность числе Фибоначчи
+	fmt.Println("Числа Фибоначчи: ", fibonacci(input_value_fibonacci))
 }
