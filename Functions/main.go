@@ -28,10 +28,13 @@ func main() {
 	fmt.Println("Введите число для расчета факториала: ")
 	var input_value uint
 	fmt.Scanln(&input_value)
+
 	// Объявление массива, который будет передан функции avarage
 	first_array := []float64{98, 93, 77, 82, 83}
+
 	// Вызов функции avarage, считающей среднее арифметическое
 	fmt.Println("\n\nСреднее арифметическое = ", average(first_array))
+
 	// Вызов функции factorial, считающей факториал
 	fmt.Println("Факториал числа = ", factorial(input_value))
 }
