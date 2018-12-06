@@ -32,7 +32,6 @@ func factorial(x uint) uint {
 // Объявление и описание функции fibonacci.....Доделать!!!!!!
 func fibonacci(input int) int {
 	var i int
-	var result int
 
 	if input == 1 {
 		return 1
@@ -40,16 +39,14 @@ func fibonacci(input int) int {
 	if input == 2 {
 		return 1
 	}
-	for i = 1; i < input; i++ {
 
-		result = fibonacci(i-1) + fibonacci(i-2)
-		fmt.Println(result)
-	}
-	return result
+	return fibonacci(i-1) + fibonacci(i-2)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 func main() {
+	var i int
+
 	fmt.Println("Введите число для расчета факториала: ")
 	var input_value_factorial uint
 	fmt.Scanln(&input_value_factorial)
@@ -68,5 +65,8 @@ func main() {
 	fmt.Println("Факториал числа = ", factorial(input_value_factorial))
 
 	//Вызов функции fibonacci, считающей последовательность числе Фибоначчи
-	fmt.Println("Числа Фибоначчи: ", fibonacci(input_value_fibonacci))
+	fmt.Println("Числа Фибоначчи: ")
+	for i = 1; i < input_value_fibonacci; i++ {
+		fmt.Println(fibonacci(input_value_fibonacci))
+	}
 }
