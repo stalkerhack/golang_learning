@@ -2,9 +2,8 @@ package main
 
 import "fmt"
 
-func average(avarage_array []float64) float64 {
+func average(avarage_array []float64) (result float64) {
 	var i int
-	var result float64
 
 	total := 0.0
 	for i = 0; i < len(avarage_array); i++ {
@@ -12,7 +11,7 @@ func average(avarage_array []float64) float64 {
 	}
 
 	result = total / float64(len(avarage_array))
-	return result
+	return
 }
 
 func main() {
