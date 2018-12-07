@@ -46,13 +46,13 @@ func fibonacci(input int) int {
 ////////////////////////////////////////////////////////////////////////////////
 func main() {
 	var i int
+	var input_value_fibonacci int
+	var input_value_factorial uint
 
 	fmt.Println("Введите число для расчета факториала: ")
-	var input_value_factorial uint
 	fmt.Scanln(&input_value_factorial)
 
 	fmt.Println("\nВведите число для числе Фибоначчи: ")
-	var input_value_fibonacci int
 	fmt.Scanln(&input_value_fibonacci)
 
 	// Объявление массива, который будет передан функции avarage
