@@ -67,6 +67,6 @@ func main() {
 	//Вызов функции fibonacci, считающей последовательность числе Фибоначчи
 	fmt.Println("Числа Фибоначчи: ")
 	for i = 1; i < input_value_fibonacci; i++ {
-		fmt.Println(fibonacci(input_value_fibonacci))
+		fmt.Println(fibonacci(i))
 	}
 }
