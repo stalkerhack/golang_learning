@@ -31,7 +31,7 @@ func factorial(x uint) uint {
 ////////////////////////////////////////////////////////////////////////////////
 // Объявление и описание функции fibonacci.....Доделать!!!!!!
 func fibonacci(input int) int {
-	var i int
+	//var i int
 
 	if input == 0 {
 		return input
@@ -40,7 +40,7 @@ func fibonacci(input int) int {
 		return input
 	}
 
-	return fibonacci(i-1) + fibonacci(i-2)
+	return fibonacci(input-1) + fibonacci(input-2)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
