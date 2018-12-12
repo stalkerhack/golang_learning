@@ -40,6 +40,7 @@ func main() {
 	var rx1, ry1 float64 = 0, 0
 	var rx2, ry2 float64 = 10, 10
 	var cx, cy, cr float64 = 0, 0, 5
+	var c Circle
 
 	fmt.Println("X = ", x, "\n", "Y = ", y)
 	fmt.Println("\nSwap the numbers...Magic...\n", "Result: \n")
@@ -48,4 +49,9 @@ func main() {
 
 	fmt.Println("\n", rectangleArea(rx1, ry1, rx2, ry2))
 	fmt.Println(circleArea(cx, cy, cr))
+
+	c.x = 10
+	c.y = 5
+	c.r = c.x * c.y
+	fmt.Println("\nc.r = ", c.r)
 }
