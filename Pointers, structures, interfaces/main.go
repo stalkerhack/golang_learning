@@ -60,5 +60,5 @@ func main() {
 	fmt.Println("\nc.r = ", c.r)
 
 	c = Circle{0, 0, 5}
-	fmt.Println("circleArea(c) = ", circleArea(c))
+	fmt.Println("\ncircleArea(c) = ", circleArea(c))
 }
