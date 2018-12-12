@@ -29,6 +29,12 @@ func circleArea(x, y, r float64) float64 {
 	return math.Pi * r * r
 }
 
+type Circle struct {
+	x float64
+	y float64
+	r float64
+}
+
 func main() {
 	var x, y int = 23, 32
 	var rx1, ry1 float64 = 0, 0
