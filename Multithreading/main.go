@@ -21,7 +21,7 @@ func second_function_gorutine(n int) {
 }
 
 func main() {
-	go first_gorutine(123)
+	go first__function_gorutine(123)
 	fmt.Println("\n")
 	//////////////////////////////////////////
 	for i := 0; i < 10; i++ {
