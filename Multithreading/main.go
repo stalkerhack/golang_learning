@@ -6,13 +6,13 @@ import (
 	"time"
 )
 
-func first_gorutine(n int) {
+func first__function_gorutine(n int) {
 	for i := 0; i < 10; i++ {
 		fmt.Println(n, ":", i)
 	}
 }
 
-func f(n int) {
+func second_function_gorutine(n int) {
 	for i := 0; i < 10; i++ {
 		fmt.Println(n, ":", i)
 		amt := time.Duration(rand.Intn(250))
@@ -23,9 +23,9 @@ func f(n int) {
 func main() {
 	go first_gorutine(123)
 	fmt.Println("\n")
-
+	//////////////////////////////////////////
 	for i := 0; i < 10; i++ {
-		go f(i)
+		go second_function_gorutine(i)
 	}
 
 	var input string
