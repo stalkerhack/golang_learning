@@ -2,31 +2,26 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"time"
 )
 
-func first__function_gorutine(n int) {
-	for i := 0; i < 10; i++ {
-		fmt.Println(n, ":", i)
+func pinger(c chan string) {
+	for i := 0; ; i++ {
+		c <- "Message..."
 	}
 }
-
-func second_function_gorutine(n int) {
-	for i := 0; i < 10; i++ {
-		fmt.Println(n, ":", i)
-		amt := time.Duration(rand.Intn(250))
-		time.Sleep(time.Millisecond * amt)
+func printer(c chan string) {
+	for {
+		msg := <-c
+		fmt.Println(msg)
+		time.Sleep(time.Second * 1)
 	}
 }
-
 func main() {
-	go first__function_gorutine(123)
-	fmt.Println("\n")
-	//////////////////////////////////////////
-	for i := 0; i < 10; i++ {
-		go second_function_gorutine(i)
-	}
+	var c chan string = make(chan string)
+
+	go pinger(c)
+	go printer(c)
 
 	var input string
 	fmt.Scanln(&input)
