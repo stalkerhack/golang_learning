@@ -11,7 +11,6 @@ func first__function_gorutine(n int) {
 		fmt.Println(n, ":", i)
 	}
 }
-
 func second_function_gorutine(n int) {
 	for i := 0; i < 10; i++ {
 		fmt.Println(n, ":", i)
@@ -19,13 +18,11 @@ func second_function_gorutine(n int) {
 		time.Sleep(time.Millisecond * amt)
 	}
 }
-
 func message(c chan string) {
 	for i := 0; ; i++ {
 		c <- "Message..."
 	}
 }
-
 func message_output(c chan string) {
 	for {
 		msg := <-c
@@ -33,7 +30,6 @@ func message_output(c chan string) {
 		time.Sleep(time.Second * 1)
 	}
 }
-
 func main() {
 	var c chan string = make(chan string)
 
@@ -49,5 +45,4 @@ func main() {
 
 	var input string
 	fmt.Scanln(&input)
-
 }
