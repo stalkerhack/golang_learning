@@ -5,7 +5,12 @@ import {"fmt"
 		_ "github.com/lib/pq"
 }
 
-type
+type books struct {
+	isbn string
+	title string
+	author string
+	price float32	
+}
 
 func main() {
 		
