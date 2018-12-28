@@ -11,6 +11,6 @@ INSERT INTO books (isbn, title, author, price) VALUES
 ('001-0000003', 'Memories od terrorist', 'Boris Savinkov', 15.50),
 ('001-0000004', 'Fahrenheit 451', 'Ray Bradbury', 20.46),
 ('001-0000005', '1984', 'George Orwell', 18.50),
-('001-0000006', 'I, Robot', 'Issac Asimov', 25.00),
+('001-0000006', 'I, Robot', 'Issac Asimov', 25.00);
 
 ALTER TABLE books ADD PRIMARY KEY (isbn);
