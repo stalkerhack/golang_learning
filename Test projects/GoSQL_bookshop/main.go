@@ -3,11 +3,12 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"log"
 
 	_ "github.com/lib/pq"
 )
 
-type books struct {
+type Book struct {
 	isbn   string
 	title  string
 	author string
@@ -15,7 +16,7 @@ type books struct {
 }
 
 func main() {
-	db, err := sql.Open("postgres", "postgres://admin:123@localhost")
+	db, err := sql.Open("postgres", "postgres://postgres:@localhost")
 	if err != nil {
 		log.Fatal(err)
 	}
