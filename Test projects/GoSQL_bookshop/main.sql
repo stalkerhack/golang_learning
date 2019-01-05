@@ -1,3 +1,7 @@
+CREATE ROLE login LOGIN PASSWORD 'password123';
+
+CREATE DATABASE books_shop WITH OWNER = login;
+
 CREATE TABLE books (
   isbn    char(14) NOT NULL,
   title   varchar(255) NOT NULL,
