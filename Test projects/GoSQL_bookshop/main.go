@@ -16,7 +16,7 @@ type Book struct {
 }
 
 func main() {
-	db, err := sql.Open("postgres", "postgres://postgres:@localhost")
+	db, err := sql.Open("postgres", "postgres://login:password123@localhost/books_shop")
 	if err != nil {
 		log.Fatal(err)
 	}
