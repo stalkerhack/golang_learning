@@ -17,11 +17,11 @@ type PC struct {
 }
 
 func main() {
-	db, err := sql.Open("postgres", "postgres://login:password123@localhost/books_shop")
+	db, err := sql.Open("postgres", "postgres://login:password123@localhost/pcs")
 	if err != nil {
 		log.Fatal(err)
 	}
-	rows, err := db.Query("SELECT * FROM books")
+	rows, err := db.Query("SELECT * FROM PCs")
 	if err != nil {
 		log.Fatal(err)
 	}
